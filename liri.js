@@ -20,8 +20,6 @@ var concertThis = function (band) {
     });
 }
 
-// concertThis("lizzo");
-
 //movie-this 
 var movieThis = function (movie) {
     var url = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
@@ -66,6 +64,8 @@ var whichCommand = function(action,value){
         spotifyThis(value);
     } else if(action === "movie-this"){
         movieThis(value);
+    } else {
+        console.log("Unrecognized action. Format needed: node liri.js concert-this, spotify-this, movie-this ");
     }
 } 
 
