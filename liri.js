@@ -6,7 +6,6 @@ var axios = require("axios");
 var spotify = new Spotify(keys.spotify);
 
 
-
 var concertThis = function(band){
     var url = "https://rest.bandsintown.com/artists/" + band + "/events?app_id=codingbootcamp"
     axios.get(url).then(function(response){
@@ -15,4 +14,4 @@ var concertThis = function(band){
     })
 }
 
-concertThis("tyler the creator");
+concertThis("lizzo");
