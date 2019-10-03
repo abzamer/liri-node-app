@@ -37,24 +37,24 @@ var movieThis = function (movie) {
     })
 }
 
-// movieThis("Sharknado");
-
 
 //Spotify
-var spotifyThis = function(song){
-    spotify.search({type: "track", query: song}, 
-    function(err, data){
-        if (err){
-            return console.log("Error occurred" + err);
-        };
-        debugger;
-        console.log(data.tracks.items[0].artists[0].name);
-        console.log(data.tracks.items[0].name);
-        // console.log(data.tracks.items[0].preview_url);
-        console.log(`Album name: ${data.tracks.items[0].album.name}`)
-        //if no song provided, play Ace of Base's The Sign
-    });
+var spotifyThis = function (song) {
+    if (song === null || song.trim().length === 0) {
+        song = "The Sign ace of base";
+    }
+    spotify.search({ type: "track", query: song },
+        function (err, data) {
+            if (err) {
+                return console.log("Error occurred" + err);
+            };
+            console.log(data.tracks.items[0].artists[0].name);
+            console.log(data.tracks.items[0].name);
+            console.log(`Album name: ${data.tracks.items[0].album.name}`)
+            //if no song provided, play Ace of Base's The Sign
+        });
 }
+
 
 var whichCommand = function(action,value){
 
@@ -65,7 +65,7 @@ var whichCommand = function(action,value){
     } else if(action === "movie-this"){
         movieThis(value);
     } else {
-        console.log("Unrecognized action. Format needed: node liri.js concert-this, spotify-this, movie-this ");
+        console.log("Unrecognized action. Format needed: node liri.js concert-this, spotify-this-song, movie-this ");
     }
 } 
 
