@@ -9,12 +9,14 @@ var spotify = new Spotify(keys.spotify);
 var concertThis = function (band) {
     var url = "https://rest.bandsintown.com/artists/" + band + "/events?app_id=codingbootcamp"
     axios.get(url).then(function (response) {
-        for (i = 0; i < response.length; i++) {
+        for (var i = 0; i < response.data.length && i < 3; i++) {
             // debugger;
-            console.log(response.data[0].venue.name);
-            console.log(response.data[0].venue.city);
-            console.log(response.data[0].datetime);
-        };
+            console.log(
+                "Venue: " + response.data[i].venue.name + "\n",
+                "City: " + response.data[i].venue.city + "\n",
+                "Time: " + response.data[i].datetime + "\n",
+            );
+        }
     });
 }
 
