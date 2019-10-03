@@ -36,9 +36,17 @@ var movieThis = function(movie){
     })
 }
 
-movieThis("Sharknado");
+// movieThis("Sharknado");
 
 
 //Spotify
+var song = "All the small things"
+spotify.search({type: "track", query: song}, 
+function(err, data){
+    if (err){
+        return console.log("Error occurred" + err);
+    };
+    console.log(data);
+});
 
 
