@@ -40,13 +40,22 @@ var movieThis = function(movie){
 
 
 //Spotify
+
 var song = "All the small things"
 spotify.search({type: "track", query: song}, 
 function(err, data){
     if (err){
         return console.log("Error occurred" + err);
     };
-    console.log(data);
+    debugger;
+    console.log(data.tracks.items[0].artists[0].name);
+    //song, preview, album
+    console.log(data.tracks.items[0].name);
+    console.log(data.tracks.items[0].preview_url);
+    // console.log(data.tracks.items[0].artists[0].name);
+    //if no song provided, play Ace of Base's The Sign
+    
+
 });
 
 
