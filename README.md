@@ -1,9 +1,27 @@
-# liri-node-app
-LIRI is command line node app that takes in parameters and gives you back data.
-1. Clearly state the problem the app is trying to solve (i.e. what is it doing and why)
-2. Give a high-level overview of how the app is organized
-3. Give start-to-finish instructions on how to run the app
-4. Include screenshots, gifs or videos of the app functioning
-5. Contain a link to a deployed version of the app
-6. Clearly list the technologies used in the app
-7. State your role in the app development
+# LIRI-node-app
+LIRI is a node app that allows users to search for a song, movie, or concert. LIRI uses different APIs to retrieve data and output to the user. 
+
+##Technology Used
+*Node-Spotify-API
+*Axios, which is used to get data from the following:
+*OMDB API
+*Bands In Town API
+*Moment
+*DotEnv
+
+##Launch
+In order to use LIRI, you must have the technologies mentioned above. Once installed, LIRI can be accessed by going to liri.js and inputing one of the following commands:
+*node liri.js spotify-this-song <song name>
+*node liri.js movie-this <movie title>
+*node liri.js concert-this <artist name>
+  
+If you choose to simply enter the command without your choice of song or movie, LIRI will happily display its choice.
+
+##Project Status
+In progress
+
+
+
+https://drive.google.com/open?id=1E6EFKIzlcV_Zem8KGVBt4wvJkgCNDYGi
+
+
