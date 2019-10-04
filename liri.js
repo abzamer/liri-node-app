@@ -5,7 +5,7 @@ var axios = require("axios");
 
 var spotify = new Spotify(keys.spotify);
 
-
+//concert-this 
 var concertThis = function (band) {
     var url = "https://rest.bandsintown.com/artists/" + band + "/events?app_id=codingbootcamp"
     axios.get(url).then(function (response) {
@@ -22,6 +22,10 @@ var concertThis = function (band) {
 
 //movie-this 
 var movieThis = function (movie) {
+    //sets the default as The Sign by Ace of Base if no input
+    if (movie === null || movie.trim().length === 0) {
+        movie = "Mr. Nobody";
+    }
     var url = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
     axios.get(url).then(function (response) {
         var movie = response.data;
@@ -38,8 +42,9 @@ var movieThis = function (movie) {
 }
 
 
-//Spotify
+//spotify-this-song
 var spotifyThis = function (song) {
+    //sets the default as The Sign by Ace of Base if no input
     if (song === null || song.trim().length === 0) {
         song = "The Sign ace of base";
     }
@@ -51,11 +56,10 @@ var spotifyThis = function (song) {
             console.log(data.tracks.items[0].artists[0].name);
             console.log(data.tracks.items[0].name);
             console.log(`Album name: ${data.tracks.items[0].album.name}`)
-            //if no song provided, play Ace of Base's The Sign
         });
 }
 
-
+//user input & what is output
 var whichCommand = function(action,value){
 
     if(action==="concert-this"){
