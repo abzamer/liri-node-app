@@ -9,8 +9,8 @@ var spotify = new Spotify(keys.spotify);
 var concertThis = function (band) {
     var url = "https://rest.bandsintown.com/artists/" + band + "/events?app_id=codingbootcamp"
     axios.get(url).then(function (response) {
+        // var datetime = moment().format('MM DD YYYY');
         for (var i = 0; i < response.data.length && i < 3; i++) {
-            // debugger;
             console.log(
                 "Venue: " + response.data[i].venue.name + "\n",
                 "City: " + response.data[i].venue.city + "\n",
@@ -53,9 +53,13 @@ var spotifyThis = function (song) {
             if (err) {
                 return console.log("Error occurred" + err);
             };
-            console.log(data.tracks.items[0].artists[0].name);
-            console.log(data.tracks.items[0].name);
-            console.log(`Album name: ${data.tracks.items[0].album.name}`)
+            debugger;
+            console.log(
+                " Artist: " + data.tracks.items[0].artists[0].name + "\n",
+                "Song: " + data.tracks.items[0].name + "\n",
+                "Preview: " + data.tracks.items[0].preview_url + "\n",
+                "Album: " + data.tracks.items[0].album.name + "\n",
+            );
         });
 }
 
@@ -74,6 +78,6 @@ var whichCommand = function(action,value){
 } 
 
 var userCommand = process.argv[2];
-var userValue = process.argv.splice(3).join("+")
+var userValue = process.argv.splice(3).join("+");
 
 whichCommand(userCommand,userValue);
