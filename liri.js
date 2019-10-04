@@ -3,6 +3,7 @@ var keys = require("./keys.js");
 var Spotify = require("node-spotify-api");
 var axios = require("axios");
 var moment = require("moment");
+var fs = require("fs");
 
 var spotify = new Spotify(keys.spotify);
 
@@ -42,7 +43,6 @@ var movieThis = function (movie) {
     })
 }
 
-
 //spotify-this-song
 var spotifyThis = function (song) {
     //sets the default as The Sign by Ace of Base if no input
@@ -63,6 +63,9 @@ var spotifyThis = function (song) {
             );
         });
 }
+
+//do-what-it-says
+
 
 //user input & what is output
 var whichCommand = function(action,value){
