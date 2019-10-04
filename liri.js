@@ -55,8 +55,8 @@ var spotifyThis = function (song) {
             };
             // debugger;
             console.log(
-                " Artist: " + data.tracks.items[0].artists[0].name + "\n",
-                "Song: " + data.tracks.items[0].name + "\n",
+                " Song: " + data.tracks.items[0].name + "\n",
+                "Artist: " + data.tracks.items[0].artists[0].name + "\n",
                 "Preview: " + data.tracks.items[0].preview_url + "\n",
                 "Album: " + data.tracks.items[0].album.name + "\n",
             );
