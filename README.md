@@ -19,6 +19,15 @@ In order to use LIRI, you must have the technologies mentioned above. Once insta
   
 If you choose to simply enter the command without your choice of song or movie, LIRI will happily display its choice.
 
+## Video
+This video shows LIRI working with the spotify-this-song command
+
+This video shows LIRI working with the movie-this command
+
+This video shows LIRI working with the concert-this command
+
+
+
 
 ## Project Status
 In progress
