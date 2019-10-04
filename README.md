@@ -20,12 +20,18 @@ In order to use LIRI, you must have the technologies mentioned above. Once insta
 If you choose to simply enter the command without your choice of song or movie, LIRI will happily display its choice.
 
 ## Video
+The following videos are demonstrations of the LIRI app in action. You will notice that the corresponding code is above the terminal.
 This video shows LIRI working with the spotify-this-song command:
-https://drive.google.com/file/d/1gkk3Kf9O_lhiJ-44abT2AQcZYw8XDCr9/view
+* https://drive.google.com/file/d/1gkk3Kf9O_lhiJ-44abT2AQcZYw8XDCr9/view
 
 This video shows LIRI working with the movie-this command:
+* https://drive.google.com/file/d/1gsTilHgQ_ebGfVVEf4zozAjUYuiGNgQV/view
 
-This video shows LIRI working with the concert-this command
+This video shows LIRI working with the concert-this command:
+* https://drive.google.com/file/d/1HP889BCys7sxadZK_RcVpc92347hjgWl/view
+
+This video shows the code for the LIRI app:
+* https://drive.google.com/file/d/12EfKqbNniiGBsUU3IPahuwKEEkFR4WDc/view
 
 
 
