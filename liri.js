@@ -11,7 +11,6 @@ var spotify = new Spotify(keys.spotify);
 var concertThis = function (band) {
     var url = "https://rest.bandsintown.com/artists/" + band + "/events?app_id=codingbootcamp"
     axios.get(url).then(function (response) {
-        // var datetime = moment().format('MM DD YYYY');
         for (var i = 0; i < response.data.length && i < 3; i++) {
             console.log(
                 "Venue: " + response.data[i].venue.name + "\n",
@@ -54,7 +53,7 @@ var spotifyThis = function (song) {
             if (err) {
                 return console.log("Error occurred" + err);
             };
-            debugger;
+            // debugger;
             console.log(
                 " Artist: " + data.tracks.items[0].artists[0].name + "\n",
                 "Song: " + data.tracks.items[0].name + "\n",
@@ -65,6 +64,14 @@ var spotifyThis = function (song) {
 }
 
 //do-what-it-says
+var doWhatItSays = function () {
+    fs.readFile("random.txt", "utf8", function (error, data) {
+        if (error) {
+            return console.log(error);
+        } console.log(data);
+        //set a var to the text & have it call the appropriate function
+    })
+} 
 
 
 //user input & what is output
@@ -76,7 +83,12 @@ var whichCommand = function(action,value){
         spotifyThis(value);
     } else if(action === "movie-this"){
         movieThis(value);
-    } else {
+    } 
+    //this needs sets what the output would be "I want it that way"
+    // else if(action === "do-what-it-says"){
+    //     doWhatItSays(value); 
+    // } 
+    else {
         console.log("Unrecognized action. Format needed: node liri.js concert-this, spotify-this-song, movie-this ");
     }
 } 
